@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Effet Texte qui S'écrit</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .typing {
+            font-size: 2rem;
+            font-weight: bold;
+            border-right: 3px solid #fff; /* Le curseur de la barre de recherche */
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 0;
+            animation: typing 4s steps(30) 1s forwards, blink 0.75s step-end infinite; /* L'animation de texte */
+        }
+
+        /* Animation pour le texte qui s'écrit */
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        /* Animation du curseur qui clignote */
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="typing">Bienvenue sur mon Portfolio!</div>
+
+</body>
+</html>

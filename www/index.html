@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>titre</title>
+    <link rel="stylesheet" href="styyle.css">
+    <script src="/project/jquery-3.7.1.min.js"></script> <!-- framework JQuery-->
+    <script src="script.js"></script> <!-- script -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id='nav-box'>
+    <nav>
+        <a href="#" onclick="getCard('home-card')"><img src='img/home.png' id='homeimg'></a>
+        <a href="#" onclick="getCard('skills-card')"><img src='img/engrenage-blanc.png' id='skillsimg'></a>
+        <a href="#" onclick="getCard('contact-card')"><img src='img/contact.jpg' id='contactimg'></a>
+    </nav>
+</div>
+
+<div id="card-box">
+
+    <div id='home-card' class='card card-visible'>
+   
+            <div id='presentation-home' class='presentation'> <strong>nans lafitte. </strong></div>
+
+        
+    
+        <h3>Bienvenue sur mon portfolio</h3>
+        <p class="paragraphe">
+            Je suis un developpeur en alternance pour un BTS SIO SLAM (Solution Informatique aux Organisations option Solution Logiciel et Applications Métiers).
+            <br>
+            J'ai exploré diverses facettes de l'informatique, le développement et la cybersécurité sont mes passions.
+         
+            À travers mes formations, mes exepriences professionnelles et personnelles, j'ai pu m'initier à une riche variété de principes et technologies.
+
+            Sur l'aspect des systèmes informatiques en général, mais plus particulièrement sur le
+            développement et la réalisation de projets logiciels.
+            <br>
+            Je porte également un grand intérêt aux notions de cybersécurité, les failles et leurs causes, ou encore 
+            la défense qui peut être mise en place et les attaques qui peuvent être menées.
+
+        </p>
+
+        
+        <hr>
+
+        <div class="entrep_container">
+            <h3 id="entrep_h3"> Mon Entreprise </h3>
+            <a href="https://www.pack-solutions.com/"><img src="img/entrep_logo.png" id="entrep_logo"> </a>
+        </div>
+
+
+        <hr>
+ 
+        <div class="parcour_container">
+            <h3 id="parcours_h3">Parcours</h3>
+            
+            <img src="img/parcours-modif.png" id="parcours">
+        </div>
+
+
+
+
+    </div>
+    
+    
+    <div id='skills-card' class='card card-cache'>
+       
+            <div id='presentation-skills' class='presentation' > skills. </div>
+        
+            <p>Experiences</p>
+
+            <div id="big_logo_container_exp">
+    
+                <div class="small_container_exp"  id="backend">
+                    <img src="img/backend-modif.png" id="backend_logo" class="exp_logo logo">
+                    <p class="exp_titre"><strong>BackEnd</strong></p>
+                    <p class="exp_desc">Deboggages Anomalies ou Regression</p>
+
+                </div>
+
+    
+                <div class="small_container_exp" id="database">
+                    <img src="img/database-modif.png" id="database_logo" class="exp_logo logo">
+                    <p class="exp_titre"><strong> Data </strong></p>
+                    <p class="exp_desc">Developpement, Fiabilisation, Deboggages de Packages et de Batches</p>
+
+
+                    <br>
+                </div>
+                
+                <div class="small_container_exp"  id="frontend">
+                    <img src="img/frontend-modif.png" id="frontend_logo" class="exp_logo logo">
+                    <p class="exp_titre"><strong> FrontEnd </strong></p>
+                    <p class="exp_desc">Deboggage Anomalies ou Regression</p>
+                </div>
+                
+            </div>
+
+            <hr>
+
+        <p>Languages</p>
+        <div id="logo_container">
+
+            <img src="img/PLSQL_logo_modif.png" id="PLSQL_logo" class="language_logo logo">
+            <img src="img/cplusplus_logo.png" id="cplusplus_logo" class="language_logo logo">
+            <img src="img/java_logo.png" id="java_logo" class="language_logo logo">
+            <img src="img/csharp_logo_modif.png" id="csharp_logo" class="language_logo logo">
+            <img src="img/python_logo_modif.png" id="python_logo" class="language_logo logo">
+            <img src="img/php_logo.png" id="php_logo" class="language_logo logo">
+            <img src="img/html_logo_modif.png" id="html_logo" class="language_logo logo">
+            <img src="img/css_logo_modif.png" id="css_logo" class="language_logo logo">
+        </div>
+
+
+        <hr>
+
+        <p>School Projects</p>
+
+        <div id="big_logo_container_project">
+            <div class="small_container_project" id="container_dungeon_crawler">
+                <img src="project/dungeoncrawler/vaisseau.png" id="vaisseau_logo" class="project_logo logo">
+                <p><strong><a href="/project/dungeoncrawler/index.html"> Space Invader </a></strong></p>
+                <p>Petit Jeu en JavaScript</p>
+                <br>
+            </div>
+            
+            <div class="small_container_project"  id="container_avalanche">
+                <img src="img/avalanche_logo.png" id="avalanche_logo" class="project_logo logo">
+                <p><strong><a href="/project/avalanche/index.php"> Avalanche </a></strong></p>
+                <p>Simulation en Javascript d'avalanche</p>
+            </div>
+            
+            <div class="small_container_project"  id="container_puissance_4">
+                <img src="img/puissance4_logo.png" id="puissance4_logo" class="project_logo logo">
+                <p><strong><a href="/project/puissance4/index.html"> Puissance 4 </a></strong></p>
+                <p>Jeu du puissance 4 en Javascript</p>
+     
+            </div>
+            
+        </div>        
+    
+    </div>
+    
+    
+    
+    <div id='contact-card' class='card card-cache'>
+        
+            <div id='presentation-contact' class='presentation'> contact. </div>
+            <br>
+
+            <div id="contact_container">
+
+                <a href="https://github.com/elnanso" id="id_github_logo" class="link_contact">
+                    <img src="img/github_logo_modif.png" class="contact_logo logo"> 
+                    <p>elnanso</p>
+                </a>
+
+                <a href="mailto:tonemail@example.com" class="link_contact">
+                    <img src="img/mail.png" alt="Email Logo" class="contact_logo logo">
+                    <p>hutch.lafitte@gmail.com</p>
+                </a>
+                
+                <a href="tel:+33" id="id_telephone_logo" class="link_contact">
+                    <img src="img/telephone.png" alt="Phone Logo" class="contact_logo logo">
+                    <p>0621700124</p>
+                </a>
+
+            </div>
+            
+
+    </div>
+    <footer>
+        <p id="copyright">&copy; 2024 Nans Lafitte. Tous droits réservés.</p>
+    </footer>
+
+</div>
+    
+</body>
+</html>

@@ -1,0 +1,30 @@
+table {
+    border: 2px white;
+    height : 50vh;
+    width : 50vw;
+}
+
+td {
+    height : auto;
+    width  : auto;
+    background-color: black;
+}
+html, body {
+    height : 100vh;
+    width : 100vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+#P4 {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    height : 70vh;
+    width : 70vw;
+
+}
