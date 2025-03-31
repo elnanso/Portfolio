@@ -100,10 +100,10 @@ img:active {
     overflow-y: auto;/* permet de scroll dans la div */
     transition: transform 0.3s ease-in-out;
 }
-
+/*
 .card-visible:hover {
     transform: scale(1.005);
-}
+}*/
 
 .card-cache {
     display:none;
@@ -136,13 +136,13 @@ p {
 }
 
 
-
+/*
 .presentation {
 
     font-size:2rem;
     color: aliceblue;
     font-weight: bold;
-    border-right: 2px solid #fff; /* Le curseur de la barre de recherche */
+    border-right: 2px solid #fff; 
     display: inline-block;
     white-space: nowrap;
     overflow: hidden;
@@ -150,7 +150,7 @@ p {
     height: fit-content;
     font-family: Poppins;
     height: auto;
-}
+}*/
 
 /*presentation-home*/
 #presentation-home {
@@ -163,7 +163,7 @@ p {
                 width: 0;
             }
             to {
-                width: 26%;
+                width: fit-content;
             }
         }
 @keyframes blink {
@@ -183,7 +183,7 @@ p {
                 width: 0;
             }
             to {
-                width: 13%;
+                width: fit-content;
             }
         }
 @keyframes blink {
@@ -193,9 +193,9 @@ p {
         }
 
 
-/*presentation-contact*/
+/*presentation-contact
 #presentation-contact {
-    animation: presentation-contact 1s steps(8) 0.5s forwards, blink 0.75s step-end infinite; /* L'animation de texte */
+    animation: presentation-contact 1s steps(8) 0.5s forwards, blink 0.75s step-end infinite;
 }
 
 @keyframes presentation-contact {
@@ -203,7 +203,7 @@ p {
                 width: 0;
             }
             to {
-                width: 18%;
+                width: fit-content; 
             }
         }
 @keyframes blink {
@@ -211,6 +211,70 @@ p {
                 border-color: transparent;
             }
         }
+*/
+/*
+#presentation-contact {
+    display: inline-block;
+
+  }
+
+#text-presentation-contact{
+
+    color: white;
+    border-right: 2px solid rgb(255, 255, 255); 
+    font-size: 2em; 
+    width:100%;
+    overflow: hidden;
+    white-space: nowrap;
+    animation:  typing 1s steps(8) , 
+                blink 0.75s step-end infinite;
+   
+}
+  
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+
+  }
+  
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }*/
+
+  #presentation-contact {
+    display: inline-block;
+}
+
+#text-presentation-contact {
+    color: white;
+    border-right: 2px solid white;
+    font-size: 2em;
+    font-family: 'Poppins', sans-serif; /* Garder Poppins */
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    clip-path: inset(0 100% 0 0); /* Cache tout au début */
+    animation: typing 2s steps(8) forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        clip-path: inset(0 100% 0 0); /* Cache tout */
+    }
+    to {
+        clip-path: inset(0 0 0 0); /* Montre tout */
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
 
 
 
@@ -480,8 +544,9 @@ hr {
 #parcours_h3{
     margin-bottom: 0px;
 }
-
+/*
 #entrep_container{
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -502,4 +567,90 @@ hr {
 
 #entrep_logo:hover{
     scale:1.05;
+    position: absolute;
+    top: 50px; 
+    left: 20px; 
+    z-index: 2;
+}
+
+#ps-background{
+    width: 100%; 
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; 
+}*/
+.entrep_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position:relative;
+}
+
+#ps-background {
+    width:100%;
+  
+    border-radius: 40px;
+    z-index: 0; /* L'image est en dessous des autres éléments */
+}
+
+#entrep_logo {
+    opacity: 1;
+    position: absolute; /*Ajouté pour empêcher l'élément de sortir de son parent en cas de survol */
+    top:85%;
+    left:10%;
+    z-index:2;
+    width:80%;
+}
+
+#ps-background:hover {
+    transform: scale(1.005);  /* Applique un agrandissement au survol */
+}
+#entrep_logo:hover {
+    transform: scale(1.005);  /* Applique un agrandissement au survol */
+}
+
+
+#big_logo_container_work{
+    width: 100%;
+    height: 50%;
+    gap:1%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+.small_container_work{
+    width: 33%;
+    height: 100%;
+    padding: 3%;
+    color:black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    border-radius: 20px;
+    box-sizing: border-box; 
+    gap:5%;
+}
+
+.small_container_work:hover{
+    cursor: pointer; 
+    scale:1.05;
+    background-color: #0e0e0e7f;
+}
+
+.small_container_work > * {
+    /* Les enfants directs de .small_container_work */
+    width: 100%; /* ou une autre largeur, selon le besoin */
+    margin: 0; /* Réinitialise les marges */
+}
+
+
+.small_container_work p {
+    font-size: smaller; 
+    text-align: center;
 }
