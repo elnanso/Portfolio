@@ -1,0 +1,562 @@
+
+/* GLOBAL */
+
+html body  {
+    width:100vw;
+    height:100vh;
+    background-color:rgb(0, 0, 0);
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#nav-box{
+    height:100vh;
+    width: 10vw;
+    background:black;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#copyright{
+    font-size: smaller;
+}
+
+#card-box{
+    height:100vh;
+    width: 90vw;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10vw;
+}
+
+
+nav {
+    height: 20%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-family: Poppins;
+}
+
+#homeimg {
+    width: 40px;  
+    height: 40px;
+    margin-bottom: 15px;
+    
+}
+#skillsimg {
+    width: 50px;  
+    height: 50px;
+
+    margin-bottom: 10px;
+    
+}
+#contactimg {
+    width: 50px; 
+    height: 50px; 
+    
+}
+
+img {
+    transition: all 0.3s ease; 
+    transform: scale(1);
+}
+
+img:hover {
+    transform: scale(1.1); 
+}
+
+img:active {
+    transform: scale(1.05); 
+}
+
+.logo{
+    transition: transform 0.3s ease;
+}
+
+.logo:hover{
+    transform: scale(1.1); 
+}
+
+.card-visible {
+    height: 70vh;
+    width: 60vw;
+/*
+    background:linear-gradient(to bottom, rgba(28, 28, 28, 0.74), rgba(255, 255, 255, 0.616));
+*/
+    background:linear-gradient(to bottom, rgb(0, 0, 0), rgba(255, 255, 255, 0.408));
+
+    border-radius:20px;
+
+    padding:50px;
+    overflow-y: auto;/* permet de scroll dans la div */
+    transition: transform 0.3s ease-in-out;
+}
+/*
+.card-visible:hover {
+    transform: scale(1.005);
+}*/
+
+.card-cache {
+    display:none;
+}
+
+h3 {
+    font-family: Poppins;
+    color: rgba(0, 0, 0, 0.496); 
+    animation: fadeColor 3.5s ease-in-out 0s forwards; 
+}
+
+
+p {
+    font-family: Poppins;
+    color: rgba(0, 0, 0, 0.496); 
+    animation: fadeColor 2.5s ease-in-out 0s forwards; 
+}
+
+
+@keyframes fadeColor {
+    0%{
+        color: rgba(0, 0, 0, 0); 
+    }
+    50% {
+        color: rgba(0, 0, 0, 0.496); 
+    }
+    100% {
+        color: white; 
+    }
+}
+
+@keyframes typing {
+    from {
+        max-width:0%;
+    }
+
+}
+
+@keyframes blink {
+    from, to { border-color: transparent }
+    50% { border-color: white }
+  }
+
+
+@keyframes slideInFromLeftProject {
+    0% {
+        transform: translateX(-200%);
+        opacity: 0; 
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(200%);
+        opacity: 0; 
+        visibility:visible;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+        visibility:visible;
+    }
+}
+
+
+hr {
+    border: 0;
+    height: 2px;
+    background-color: #cccccc91;
+}
+
+/*------------------------------------------------------- HOME --------------------------------------------------------*/
+
+.presentation {
+    margin:0;
+    padding:0;
+    display: inline-block;
+}
+
+#text-presentation-home {
+    color: white;
+    border-right: 2px solid white;
+    font-size: 2em;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    white-space: nowrap;
+    margin:0;
+    display: inline-block;
+    max-width: 100%;
+    animation: typing 1s steps(26), blink 0.75s step-end infinite;
+}
+
+#parcours{
+    animation: slideInFromLeftProject 2s ease-out forwards;
+    opacity: 0;
+    width:100%;
+    height: 70%;
+    margin-top: 0px;
+
+}
+
+#parcours:hover{
+    scale:1.05;
+}
+
+.paragraphe{
+    font-size:smaller;
+    margin-bottom:20px;
+}
+
+#parcours_h3{
+    margin-bottom: 0px;
+}
+
+.entrep_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position:relative;
+}
+
+#ps-background {
+    width:100%;
+  
+    border-radius: 40px;
+    z-index: 0; /* L'image est en dessous des autres éléments */
+}
+
+#entrep_logo {
+    opacity: 1;
+    position: absolute; /*Ajouté pour empêcher l'élément de sortir de son parent en cas de survol */
+    top:85%;
+    left:10%;
+    z-index:2;
+    width:70%;
+}
+#entrep_a{
+    width:90%;
+}
+
+#ps-background:hover {
+    transform: scale(1.005);  /* Applique un agrandissement au survol */
+}
+#entrep_logo:hover {
+    transform: scale(1.005);  /* Applique un agrandissement au survol */
+}
+
+
+
+/*------------------------------------------------------- SKILLS --------------------------------------------------------*/
+
+/*TITRE*/
+#text-presentation-skills {
+    color: white;
+    border-right: 2px solid white;
+    font-size: 2em;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    margin:0;
+    max-width: 100%;
+    animation: typing 1s steps(18), blink 0.75s step-end infinite;
+}
+
+/*Experiences*/
+#big_container_Experiences {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:3%;
+}
+
+.small_container_Experiences {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 30%;
+    text-align: center;
+    opacity: 0;
+
+    animation: slideInFromLeftProject 2s ease-out forwards;
+    
+} 
+
+#backend_logo{
+    width: 50%;
+}
+#database_logo{
+    width: 65%;
+}
+#frontend_logo{
+    width: 40%;
+}
+
+.titre_Experiences{
+    margin-bottom: 0;
+}
+
+.description_Experiences{
+    font-size: smaller;
+    margin-top: 0;
+}
+
+/*school project*/
+
+#big_container_schoolProject {
+    width: 100%;
+    height: 50%;
+    gap:1%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    margin-bottom: 3%;
+}
+
+.small_container_schoolProject {
+    animation:slideInFromRight 3s ease-out forwards;
+    animation-delay: 2s;
+    visibility: hidden;
+    width: 25%;
+    height: 100%;
+
+    color:black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    border-radius: 20px;
+    box-sizing: border-box; 
+    padding:3%;
+    gap:2%;
+}
+
+.small_container_schoolProject img{
+
+    border-radius: 5px;
+}
+
+.small_container_schoolProject:hover{
+    cursor: pointer; 
+    scale:1.05;
+    background-color: #0e0e0e7f;
+}
+
+.small_container_schoolProject p {
+    font-size: smaller; 
+    text-align: center;
+    margin:0;
+
+}
+#DualBoot_logo{
+    width:100%;
+}
+#vaisseau_logo{
+    width:70%;
+}
+#puissance4_logo{
+    width:65%;
+    height: 50%;
+}
+#avalanche_logo{
+    width:70%;
+}
+
+/*Work Project */
+#big_container_workProject{
+    animation: slideInFromLeftProject 5s ease-out forwards;
+    width: 100%;
+    height: 50%;
+    gap:1%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    margin-bottom: 3%;
+}
+
+.small_container_workProject{
+    width: 25%;
+    height: 100%;
+
+    color:black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    border-radius: 20px;
+    box-sizing: border-box; 
+    padding:3%;
+}
+
+.small_container_workProject:hover{
+    cursor: pointer; 
+    scale:1.05;
+    background-color: #0e0e0e7f;
+}
+
+.small_container_workProject img {
+    max-width: 100%;
+}
+
+#OutilAdminLogo{
+    width: 80%;
+}
+
+#ArbitrageLogo{
+    height: 70%;
+}
+
+.small_container_workProject p {
+    font-size: smaller; 
+    text-align: center;
+}
+
+
+
+/*Languages*/
+
+#big_container_Language {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap:5%;
+}
+#Titre_Language{
+    margin-bottom: 0;
+}
+
+.language_logo {
+    width:12.5%;
+    height:10%;
+    animation: slideInFromRight 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+#css_logo {
+    animation-delay: 2.0s;
+}
+
+#html_logo {
+    animation-delay: 2.3s; 
+}
+
+#php_logo {
+    animation-delay: 2.6s;
+}
+
+#python_logo {
+    animation-delay: 2.9s;
+}
+
+#csharp_logo {
+    animation-delay: 3.2s;
+}
+
+#java_logo {
+    animation-delay: 3.5s;
+}
+
+#cplusplus_logo {
+    animation-delay: 3.8s;
+}
+
+#PLSQL_logo {
+    animation-delay: 4.1s;
+}
+
+
+#html_logo{
+    width:8%;
+    height:8%;
+}
+#css_logo{
+    width:8%;
+    height:8%;
+}
+
+#cplusplus_logo{
+    width:8%;
+    height:8%;
+}
+
+#csharp_logo{
+    width:8%;
+    height:8%;
+}
+
+
+/*------------------------------------------------------- CONTACT --------------------------------------------------------*/
+
+
+#text-presentation-contact {
+    color: white;
+    border-right: 2px solid white;
+    font-size: 2em;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    white-space: nowrap;
+    margin:0;
+    display: inline-block;
+    max-width: 100%;
+    animation: typing 1s steps(22), blink 0.75s step-end infinite;
+}
+
+
+
+#contact_container {
+    display: flex;
+    flex-direction: column;
+    margin-top:5%;
+   
+}
+.contact_logo{
+    width:50px;
+    height:50px;
+}
+.link_contact{
+    animation: slideInFromLeftProject 2s ease-out forwards;
+    opacity: 0;
+    display: flex;
+    margin-left:50px;
+    margin-bottom:20px;
+    /*border:solid green 2px;
+    justify-content: center;
+    align-items: center;*/
+    gap:40px;
+}
+
+#veille-informatique{
+    
+    animation: slideInFromRight 4s ease-out forwards;
+    font-family: Poppins;
+}
+
+#DivAnnexes {
+    
+    font-family: Poppins;
+}
+#DivAnnexes h2{
+    
+    font-family: Poppins;
+}
+#id_github_logo{
+    margin-right:135px;
+}

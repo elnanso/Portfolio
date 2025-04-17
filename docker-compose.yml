@@ -6,26 +6,14 @@ services:
     build: 
       context: .
       dockerfile: Dockerfile
+    restart: always
     container_name: apache
     ports:
-      - "8080:80"
+      - "8081:80"
     volumes:
       - ./www:/var/www/html
     networks:
       - lamp 
-
-  db:
-    image: mariadb:latest
-    container_name: mariadb
-    volumes:
-      - ./sql:/docker-entrypoint-initdb.d 
-    environment:
-      MYSQL_ROOT_PASSWORD: rootmariadb
-      MYSQL_DATABASE: ma-database
-    ports:
-      - "3306:3306"
-    networks:
-      - lamp
 
 networks:
   lamp:

@@ -1,9 +1,10 @@
 <?php
-$whitelist = ['127.0.0.1', 'localhost', '172.20.0.1'];
+$whitelist = ['127.0.0.1', 'localhost', '172.20.0.1']; 
 
 $urlArbitrage = "/ressources/ARBITRAGE-SECU-KO-REINVEST-DIFF-INVEST/TICKET-ARBITRAGE.html";
 $urlOutilAdmin = "/ressources/OUTILS-ADMIN/TICKET-OUTILS-ADMIN.html";
 $urlEspaceClient = "/ressources/ESPACE-CLIENT-KO-AFFILIATION-NON-DISPO/TICKET-ESPACECLIENT.html";
+$urlContreOrdre = "/ressources/CONTRE-ORDRE/ContreOrdre.html";
 
 $param=$_GET["nomPage"];
 $urlCible = null;
@@ -16,6 +17,9 @@ else if($param == "OutilAdmin") {
 }
 else if ($param == "EspaceClient"){
     $urlCible = $urlEspaceClient;
+}
+else if ($param == "ContreOrdre"){
+    $urlCible = $urlContreOrdre;
 }
 
 function getIp(): string
